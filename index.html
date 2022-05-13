@@ -1,0 +1,480 @@
+<!-- 
+Objective
+Introduction - https://getbootstrap.com/docs/5.1/getting-started/introduction/
+1. To demostrate how to import Bootstrap CSS and Bootstrap JavaScript
+2. Create a simple simple Web Page 
+
+Supported content Nav Bar
+https://getbootstrap.com/docs/5.1/components/navbar/#supported-content
+
+HTML anchor Tag
+HTML <a> Tag W3s
+https://www.w3schools.com/tags/tag_a.asp
+
+3. The purpose of this demo is to introduce how to create a Bootstrap Navigation Bar
+   and insert the require customize hyper link to other Web Page
+
+Carousel
+https://getbootstrap.com/docs/5.1/components/carousel/#with-indicators
+A slideshow component for cycling through elements—images or slides of text—like a carousel.
+With indicators
+https://getbootstrap.com/docs/5.1/components/carousel/#with-indicators
+
+4. Demonstarte how to Using of the Carousel with With indicators 
+
+Carousel with Caption
+https://getbootstrap.com/docs/5.1/components/carousel/#with-captions
+Add captions to your slides easily with the .carousel-caption element within any .carousel-item.
+
+5. To demonstrate adding of caption onto the Carorsel Slide Show
+
+Basic HTML and CSS Introduction
+Types of CSS (Cascading Style Sheet)
+https://www.geeksforgeeks.org/types-of-css-cascading-style-sheet/
+6. Introduction of various types of CSS
+   1. Inline CSS
+   2. Internal or Embedded CSS.
+   3. External CSS.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Animate CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+   />
+
+<style>
+  /* Internal or Embedded CSS */
+
+  /* Apply this style setting in the body tag */
+  body {
+    background: rgb(174, 213, 238);
+    background: linear-gradient(360deg, rgba(238,174,202,1) 37%, rgba(211,100,228,1) 100%);
+  }
+
+  .navbar {
+    padding: 0px;
+  }
+
+  .navbarBackground {
+    background-color: aqua;
+    padding-bottom: 0px;
+  }
+
+  .top-heading {
+    color: rgb(173, 233, 255);
+  }
+
+  .funny {
+    text-align: center;
+    font-size: 20px;
+    color: yellow;
+  }
+
+  /* Select all imgage img tag element in the carousel-item class */
+  .carousel-item img {
+    height: 800px;
+  }
+
+  /* Enable Animate Swing effect for the Carousel Slide Show */
+  .carousel-item img {
+    display: inline-block;
+    margin: 0 0.5rem;
+    --animate-repeat: 3;
+    animation: swing; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+
+
+  /* Select all paragraph p tag element where ID is CourtesyByPexel */
+  #CourtesyByPexel p {
+    font-size: 20px;
+    color: rgb(225, 0, 255);
+    text-align: center;
+    margin: 0%;
+  }
+
+  /* Select all anchor/hyperlink a tag element where ID is CourtesyByPexel */
+  #CourtesyByPexel a {
+    font-size: 20px;
+    text-align: center;
+  }
+
+
+</style>
+
+    <title>My Online Zoo</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid navbarBackground">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="pokemon.html"
+                target="_blank"
+                >Pokemon</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://getbootstrap.com/docs/5.1/components/carousel/"
+                    target="_blank"
+                    >Carousel</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.google.com/"
+                    target="_blank"
+                    >Google</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://getbootstrap.com/docs/5.1/layout/grid/"
+                    target="_blank"
+                    >Grid System Layout</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://getbootstrap.com/docs/5.1/components/navbar/"
+                    target="_blank"
+                    >Navbar</a
+                  >
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="https://www.w3schools.com/tags/default.asp" target="_blank">HTML Element Reference</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://www.softwaretestinghelp.com/html-cheat-sheet/" target="_blank">HTML Cheat Sheet – Quick Guide To HTML Tags For Beginners</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">HTML Semantic Elements</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://blog.sellfy.com/cheat-sheets-for-web-designers/" target="_blank">29 Must-Have Cheat Sheets for Web Designers</a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item" href="https://www.geeksforgeeks.org/types-of-css-cascading-style-sheet/" target="_blank">Types of CSS (Cascading Style Sheet)</a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item" href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">CSS Selector Reference</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://blog.sellfy.com/cheat-sheets-for-web-designers/" target="_blank">Can I use?</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item" href="https://cssgradient.io/" target="_blank">CSS Gradient for Background Color</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item" href="https://animate.style/" target="_blank">Animate.css</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="https://towardsai.net/p/programming/how-to-deploy-a-static-website-using-github" target="_blank">How to Deploy a Static Website using Github</a></li>
+                
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="https://www.netlify.com/github-pages-vs-netlify/?utm_source=google&utm_medium=paid_search&utm_campaign=12755510841&adgroup=118788144457&utm_term=how%20to%20deploy%20a%20website%20on%20github&utm_content=kwd-1614459094299&creative=514583566275&device=c&matchtype=p&location=2702&gclid=Cj0KCQjw4PKTBhD8ARIsAHChzRLU5zNwArbZRPhlaPRUJ3De5rrgeF1lPhIU7zBQGG7NkCzSTZy1OXQaAmG7EALw_wcB" target="_blank">Netlify</a></li>
+                <li><a class="dropdown-item" href="https://www.freecodecamp.org/news/publish-your-website-netlify-github/" target="_blank">How to Publish an HTML Website on Netlify or GitHub Pages</a></li>
+                <li><a href="https://www.youtube.com/watch?v=gaC-l9MAE9Q" target="_blank">Deploy Your Website In Minutes With Netlify</a>
+                  <br>
+                  <img src="https://img.youtube.com/vi/gaC-l9MAE9Q/default.jpg" alt="">
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" style="color: red">Disabled</a>
+              <a class="nav-link enable" style="color: green">Enable</a>
+            </li> -->
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="top-heading">
+      <h1>Carousel with Caption</h1>
+      <!-- In-Line Styling 
+           Relizing the text color have been overridden to Blue color
+           Demostrate the In-Line styling will overriding all other CSS setting
+      -->
+      <h3 style="text-align:center; color: blue">My Online Zoo</h3>
+    </div>
+
+    <div class="funny animate__animated animate__bounce animate__delay-2s animate__infinite	infinite">
+      My Funny Bouncing ZOO!!<br>
+      <a href="https://animate.style/" target="_blank">Animate.css - Bounce effect</a>
+    </div>
+    
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="3"
+        aria-label="Slide 4"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="4"
+        aria-label="Slide 5"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="5"
+        aria-label="Slide 6"
+      ></button>
+      <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="6"
+      aria-label="Slide 7"
+    ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 1 - Elephant</h5>
+            <p>This is an Elephant</p>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <img src="https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" 
+            class="d-block w-100" 
+            alt="..." 
+            />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 2 - Squirrel</h5>
+            <p>This is an Squirrel</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/52961/antelope-nature-flowers-meadow-52961.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" 
+            class="d-block w-100" 
+            alt="..." 
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 3 - Antelope</h5>
+            <p>This is an Antelope</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/631292/pexels-photo-631292.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" 
+            class="d-block w-100" 
+            alt="..." 
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 4 - Rhinoceros</h5>
+            <p>This is an Rhinoceros</p>
+          </div>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/3608263/pexels-photo-3608263.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" 
+            class="d-block w-100" 
+            alt="..." 
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 5 - Panda</h5>
+            <p>This is an Panda</p>
+          </div>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/133459/pexels-photo-133459.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" 
+            class="d-block w-100" 
+            alt="..." 
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 6 - Squirrel</h5>
+            <p>This is an Elephant</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/3396657/pexels-photo-3396657.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" 
+            class="d-block w-100" 
+            alt="..." 
+            />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 7 - Llama</h5>
+            <p>This is an Llama</p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <h3 style="margin-top: 20px; color:aquamarine; ">Layout with Fluid Container</h3>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col col-xs-4 col-sm-4 col-sm-4 col-lg-4">
+          <img src="https://images.freeimages.com/images/small-previews/107/green-leaves-1410259.jpg" alt="">
+        </div>
+        <div class="col col-xs-4 col-sm-4 col-sm-4 col-lg-4">
+          <img src="https://images.freeimages.com/images/small-previews/db4/disturbing-water-1180557.jpg" alt="">
+        </div>
+        <div class="col col-xs-4 col-sm-4 col-sm-4 col-lg-4">
+          <img src="https://images.freeimages.com/images/small-previews/655/glass-abstract-1501217.jpg" alt="">
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col">
+          <img src="https://images.freeimages.com/images/small-previews/13e/my-cat-1363423.jpg" alt="">
+        </div>
+        <div class="col">
+          <img src="https://images.freeimages.com/images/small-previews/d9c/parrot-attack-1410608.jpg" alt="">
+        </div>
+        <div class="col">
+          <img src="https://images.freeimages.com/images/small-previews/6ea/sting-ray-1197143.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer style="margin-top: 20px;">
+      <div id="CourtesyByPexel">
+        <p>All Images are provided through the courtesy by Pexels</p>
+        <p>All images are "Powered by" <a href="https://www.pexels.com/">Pexels</a></p>
+        <p><a href="https://www.pexels.com/license/">Please Read Pexels Legal License</a></p>
+        
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
